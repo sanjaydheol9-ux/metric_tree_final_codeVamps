@@ -3,8 +3,11 @@ import { useOutletContext } from "react-router-dom";
 import { Truck, CheckCircle, Clock, Warehouse, Package } from "lucide-react";
 
 type ContextType = {
-  selectedWeek: { label: string; value: number };
+  selectedWeek: number;
 };
+
+const { selectedWeek } = useOutletContext<ContextType>();
+
 
 type Metrics = {
   delivery_score: number;
